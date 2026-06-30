@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Expense Tracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html"><span class="brand-mark">S</span><span>Smart Expense</span></a>
+      <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn mobile-menu-btn" data-menu-toggle aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+        <button class="icon-btn" data-theme-toggle aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button>
+        <a class="btn btn-secondary" href="login.html">Login</a>
+        <a class="btn btn-primary" href="register.html">Register</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="fade-up">
+          <span class="eyebrow"><i class="fa-solid fa-sparkles"></i> Personal finance, simplified</span>
+          <h1>Manage Your Expenses Smarter</h1>
+          <p>Track expenses, budgets, savings, and financial insights from one powerful dashboard built for students, employees, freelancers, and families.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="register.html"><i class="fa-solid fa-arrow-right"></i> Get Started</a>
+            <a class="btn btn-secondary" href="dashboard.html"><i class="fa-solid fa-play"></i> Watch Demo</a>
+          </div>
+          <div class="chip-row">
+            <span class="chip"><i class="fa-solid fa-check"></i> Budget Planning</span>
+            <span class="chip"><i class="fa-solid fa-check"></i> Expense Tracking</span>
+            <span class="chip"><i class="fa-solid fa-check"></i> Smart Reports</span>
+            <span class="chip"><i class="fa-solid fa-check"></i> Analytics</span>
+          </div>
+        </div>
+
+        <div class="dashboard-art fade-up">
+          <div class="mock-window">
+            <div class="mock-top">
+              <div class="mock-dots"><span></span><span></span><span></span></div>
+              <strong>Finance Overview</strong>
+            </div>
+            <div class="mock-body">
+              <div class="grid">
+                <div class="mini-card"><span class="panel-muted">Current Balance</span><strong>₹59,900</strong></div>
+                <div class="mini-card">
+                  <span class="panel-muted">Monthly Trend</span>
+                  <div class="bar-chart"><span style="height: 42%"></span><span style="height: 58%"></span><span style="height: 36%"></span><span style="height: 70%"></span><span style="height: 52%"></span><span style="height: 82%"></span></div>
+                </div>
+              </div>
+              <div class="grid">
+                <div class="mini-card"><span class="panel-muted">Expenses</span><strong>₹28,100</strong></div>
+                <div class="mini-card"><span class="panel-muted">Category Split</span><div class="donut"></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="floating-card float-1"><span class="stat-icon green"><i class="fa-solid fa-arrow-trend-up"></i></span><div><strong>₹14,000</strong><br><span class="panel-muted">Freelance Income</span></div></div>
+          <div class="floating-card float-2"><span class="stat-icon blue"><i class="fa-solid fa-piggy-bank"></i></span><div><strong>68%</strong><br><span class="panel-muted">Savings Goal</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section compact">
+      <div class="container logo-strip">
+        <div class="logo-pill">Google</div><div class="logo-pill">Microsoft</div><div class="logo-pill">Amazon</div><div class="logo-pill">Infosys</div>
+        <div class="logo-pill">TCS</div><div class="logo-pill">Wipro</div><div class="logo-pill">IBM</div><div class="logo-pill">Adobe</div>
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section-title">
+          <h2>Everything You Need To Manage Money</h2>
+          <p>Fast expense entry, budgets, savings goals, reports, and visual insights in one clean SaaS interface.</p>
+        </div>
+        <div class="grid grid-3">
+          <article class="card feature-card"><i class="fa-solid fa-receipt"></i><h3>Expense Tracking</h3><p>Capture daily spending with categories, dates, payment methods, and descriptions.</p><a href="transactions.html">Learn More</a></article>
+          <article class="card feature-card"><i class="fa-solid fa-bullseye"></i><h3>Budget Planner</h3><p>Set monthly limits and monitor remaining budget before overspending happens.</p><a href="budget.html">Learn More</a></article>
+          <article class="card feature-card"><i class="fa-solid fa-piggy-bank"></i><h3>Savings Goals</h3><p>Track progress toward emergency funds, purchases, and future plans.</p><a href="dashboard.html">Learn More</a></article>
+          <article class="card feature-card"><i class="fa-solid fa-file-lines"></i><h3>Reports</h3><p>Prepare daily, weekly, monthly, yearly, and category-wise finance summaries.</p><a href="reports.html">Learn More</a></article>
+          <article class="card feature-card"><i class="fa-solid fa-chart-line"></i><h3>Analytics</h3><p>Understand income, expense trends, category distribution, and savings growth.</p><a href="analytics.html">Learn More</a></article>
+          <article class="card feature-card"><i class="fa-solid fa-bell"></i><h3>Notifications</h3><p>Get budget warnings, bill reminders, and monthly summary alerts.</p><a href="settings.html">Learn More</a></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark-band">
+      <div class="container grid grid-4">
+        <div class="card stat-card"><div><p>Total Users</p><h3><span data-counter="100" data-suffix="K+">0</span></h3></div><span class="stat-icon blue"><i class="fa-solid fa-users"></i></span></div>
+        <div class="card stat-card"><div><p>Transactions</p><h3><span data-counter="10" data-suffix="M+">0</span></h3></div><span class="stat-icon green"><i class="fa-solid fa-right-left"></i></span></div>
+        <div class="card stat-card"><div><p>Money Tracked</p><h3><span data-counter="500" data-prefix="₹" data-suffix="Cr+">0</span></h3></div><span class="stat-icon orange"><i class="fa-solid fa-indian-rupee-sign"></i></span></div>
+        <div class="card stat-card"><div><p>Countries</p><h3><span data-counter="50" data-suffix="+">0</span></h3></div><span class="stat-icon red"><i class="fa-solid fa-globe"></i></span></div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-title"><h2>From First Entry To Downloaded Report</h2><p>A practical workflow designed for everyday personal finance management.</p></div>
+        <div class="timeline">
+          <div class="step"><span>1</span><h3>Create Account</h3><p class="panel-muted">Start with a secure profile.</p></div>
+          <div class="step"><span>2</span><h3>Add Income</h3><p class="panel-muted">Record salary and freelance earnings.</p></div>
+          <div class="step"><span>3</span><h3>Record Expenses</h3><p class="panel-muted">Log spending in seconds.</p></div>
+          <div class="step"><span>4</span><h3>Create Budget</h3><p class="panel-muted">Set category limits.</p></div>
+          <div class="step"><span>5</span><h3>Track Analytics</h3><p class="panel-muted">Spot habits and trends.</p></div>
+          <div class="step"><span>6</span><h3>Download Reports</h3><p class="panel-muted">Export summaries anytime.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container showcase">
+        <div class="dashboard-art"><div class="mock-window"><div class="mock-top"><strong>Dashboard Preview</strong></div><div class="mock-body"><div class="mini-card"><div class="bar-chart"><span style="height: 50%"></span><span style="height: 72%"></span><span style="height: 40%"></span><span style="height: 88%"></span></div></div><div class="mini-card"><div class="donut"></div></div></div></div></div>
+        <div>
+          <h2>Real-time analytics without the clutter</h2>
+          <p class="panel-muted">View income graphs, pie charts, expense trends, budget progress, and savings status in a dashboard built for scanning.</p>
+          <div class="check-list">
+            <div><i class="fa-solid fa-check"></i> Real-Time Analytics</div><div><i class="fa-solid fa-check"></i> Pie Charts</div><div><i class="fa-solid fa-check"></i> Income Graph</div><div><i class="fa-solid fa-check"></i> Budget Overview</div>
+          </div>
+          <a class="btn btn-primary" href="dashboard.html">Explore Dashboard</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="pricing">
+      <div class="container">
+        <div class="section-title"><h2>Connect Your Finance Workflow</h2><p>Export, back up, and share data through familiar tools and payment channels.</p></div>
+        <div class="grid grid-3">
+          <div class="integration-card">Google Drive</div><div class="integration-card">Excel</div><div class="integration-card">PDF</div>
+          <div class="integration-card">Email</div><div class="integration-card">Calendar</div><div class="integration-card">UPI</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-title"><h2>Questions, Answered</h2></div>
+        <div class="accordion">
+          <div class="accordion-item open"><button>How does expense tracking work?<i class="fa-solid fa-chevron-down"></i></button><p>Add an amount, category, date, payment method, and description. The dashboard updates totals instantly.</p></div>
+          <div class="accordion-item"><button>Can I export reports?<i class="fa-solid fa-chevron-down"></i></button><p>Yes. The frontend includes PDF, Excel, and CSV export actions ready for backend integration.</p></div>
+          <div class="accordion-item"><button>Is my data secure?<i class="fa-solid fa-chevron-down"></i></button><p>The UI is prepared for JWT authentication, protected routes, validation, and secure sessions.</p></div>
+          <div class="accordion-item"><button>Can I set budgets?<i class="fa-solid fa-chevron-down"></i></button><p>Yes. Category budgets include spending progress, remaining balance, and warning states.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark-band" id="contact">
+      <div class="container section-title">
+        <h2>Take Control Of Your Finances Today</h2>
+        <p>Start with a clean frontend and connect the backend when you are ready.</p>
+        <div class="hero-actions" style="justify-content:center"><a class="btn btn-primary" href="register.html">Start Free</a><a class="btn btn-secondary" href="dashboard.html">View Demo</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div><a class="brand" href="index.html"><span class="brand-mark">S</span><span>Smart Expense</span></a><p>Modern personal finance management for everyday decisions.</p></div>
+        <div><h4>Company</h4><a href="#about">About</a><a href="#contact">Contact</a></div>
+        <div><h4>Features</h4><a href="transactions.html">Transactions</a><a href="budget.html">Budgets</a><a href="analytics.html">Analytics</a></div>
+        <div><h4>Resources</h4><a href="reports.html">Reports</a><a href="settings.html">Settings</a></div>
+        <div><h4>Legal</h4><a href="#">Privacy Policy</a><a href="#">Terms</a></div>
+      </div>
+      <div class="footer-bottom"><span>Copyright 2026 Smart Expense Tracker</span><span><i class="fa-brands fa-github"></i> <i class="fa-brands fa-linkedin"></i> <i class="fa-brands fa-x-twitter"></i></span></div>
+    </div>
+  </footer>
+
+  <script src="js/utils.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

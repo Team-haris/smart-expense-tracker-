@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | Smart Expense Tracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-app-page="dashboard">
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="dashboard.html"><span class="brand-mark">S</span><span>Smart Expense</span></a>
+      <nav class="nav-list">
+        <a class="active" href="dashboard.html"><i class="fa-solid fa-chart-pie"></i>Dashboard</a>
+        <a href="transactions.html"><i class="fa-solid fa-right-left"></i>Transactions</a>
+        <a href="budget.html"><i class="fa-solid fa-bullseye"></i>Budgets</a>
+        <a href="analytics.html"><i class="fa-solid fa-chart-line"></i>Analytics</a>
+        <a href="reports.html"><i class="fa-solid fa-file-lines"></i>Reports</a>
+        <a href="profile.html"><i class="fa-solid fa-user"></i>Profile</a>
+        <a href="settings.html"><i class="fa-solid fa-gear"></i>Settings</a>
+        <a href="index.html"><i class="fa-solid fa-right-from-bracket"></i>Logout</a>
+      </nav>
+    </aside>
+    <main class="main">
+      <header class="topbar">
+        <div class="search"><i class="fa-solid fa-search"></i><input placeholder="Search transactions, reports, budgets"></div>
+        <div class="nav-actions">
+          <button class="icon-btn" data-theme-toggle aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button>
+          <button class="icon-btn" aria-label="Notifications"><i class="fa-solid fa-bell"></i></button>
+          <button class="btn btn-primary" data-open-modal><i class="fa-solid fa-plus"></i> Quick Add</button>
+        </div>
+      </header>
+      <section class="page-pad">
+        <div class="page-heading">
+          <div><h1>Financial Dashboard</h1><p>Welcome back, <span data-user-name>Haris</span>. Here is your monthly overview.</p></div>
+          <a class="btn btn-secondary" href="reports.html"><i class="fa-solid fa-download"></i> Export</a>
+        </div>
+        <div class="grid grid-4">
+          <div class="card stat-card"><div><p>Total Balance</p><h3 data-summary="balance">₹0</h3></div><span class="stat-icon blue"><i class="fa-solid fa-wallet"></i></span></div>
+          <div class="card stat-card"><div><p>Total Income</p><h3 data-summary="income">₹0</h3></div><span class="stat-icon green"><i class="fa-solid fa-arrow-trend-up"></i></span></div>
+          <div class="card stat-card"><div><p>Total Expenses</p><h3 data-summary="expenses">₹0</h3></div><span class="stat-icon red"><i class="fa-solid fa-arrow-trend-down"></i></span></div>
+          <div class="card stat-card"><div><p>Monthly Savings</p><h3 data-summary="savings">₹0</h3></div><span class="stat-icon orange"><i class="fa-solid fa-piggy-bank"></i></span></div>
+        </div>
+        <div class="grid grid-2" style="margin-top:20px">
+          <div class="card panel chart-panel"><h2>Income vs Expense</h2><canvas id="trendChart"></canvas></div>
+          <div class="card panel chart-panel"><h2>Expense Distribution</h2><canvas id="categoryChart"></canvas></div>
+        </div>
+        <div class="grid grid-3" style="margin-top:20px">
+          <div class="card panel wide-panel"><div class="row-between"><h2>Recent Transactions</h2><a href="transactions.html">View All</a></div><div class="table-wrap"><table><thead><tr><th>Transaction</th><th>Date</th><th>Method</th><th>Type</th><th>Amount</th></tr></thead><tbody data-transactions data-limit="5"></tbody></table></div></div>
+          <div class="card panel"><h2>Budget Progress</h2><div data-budgets></div></div>
+        </div>
+        <div class="grid grid-2" style="margin-top:20px">
+          <div class="card panel"><h2>Savings Goals</h2><div data-goals></div></div>
+          <div class="card panel"><h2>Quick Actions</h2><div class="quick-actions"><button class="btn btn-primary" data-open-modal><i class="fa-solid fa-plus"></i> Add Expense</button><a class="btn btn-secondary" href="budget.html"><i class="fa-solid fa-bullseye"></i> New Budget</a><a class="btn btn-secondary" href="reports.html"><i class="fa-solid fa-file-export"></i> Export Report</a><a class="btn btn-secondary" href="analytics.html"><i class="fa-solid fa-chart-simple"></i> Analytics</a></div></div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <div class="modal-backdrop" data-modal>
+    <form class="card modal" data-transaction-form>
+      <header><h2>Add Transaction</h2><button class="icon-btn" type="button" data-close-modal><i class="fa-solid fa-xmark"></i></button></header>
+      <div class="form-grid">
+        <div class="field"><label>Type</label><select name="type"><option value="expense">Expense</option><option value="income">Income</option></select></div>
+        <div class="field"><label>Amount</label><input name="amount" type="number" min="1" required></div>
+        <div class="field"><label>Category</label><select name="category"><option>Food</option><option>Travel</option><option>Shopping</option><option>Education</option><option>Entertainment</option><option>Rent</option><option>Salary</option><option>Freelancing</option><option>Other</option></select></div>
+        <div class="field"><label>Date</label><input name="date" type="date" value="2026-06-30" required></div>
+        <div class="field"><label>Payment Method</label><select name="method"><option>UPI</option><option>Card</option><option>Cash</option><option>Bank</option></select></div>
+        <div class="field"><label>Description</label><textarea name="description" placeholder="What was this for?"></textarea></div>
+        <button class="btn btn-primary" type="submit">Save Transaction</button>
+      </div>
+    </form>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="js/storage.js"></script><script src="js/utils.js"></script><script src="js/app.js"></script><script src="js/dashboard.js"></script><script src="js/analytics.js"></script>
+</body>
+</html>

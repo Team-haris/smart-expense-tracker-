@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transactions | Smart Expense Tracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/dashboard.css"><link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-app-page="transactions">
+  <div class="app-shell">
+    <aside class="sidebar"><a class="brand" href="dashboard.html"><span class="brand-mark">S</span><span>Smart Expense</span></a><nav class="nav-list"><a href="dashboard.html"><i class="fa-solid fa-chart-pie"></i>Dashboard</a><a class="active" href="transactions.html"><i class="fa-solid fa-right-left"></i>Transactions</a><a href="budget.html"><i class="fa-solid fa-bullseye"></i>Budgets</a><a href="analytics.html"><i class="fa-solid fa-chart-line"></i>Analytics</a><a href="reports.html"><i class="fa-solid fa-file-lines"></i>Reports</a><a href="profile.html"><i class="fa-solid fa-user"></i>Profile</a><a href="settings.html"><i class="fa-solid fa-gear"></i>Settings</a><a href="index.html"><i class="fa-solid fa-right-from-bracket"></i>Logout</a></nav></aside>
+    <main class="main"><header class="topbar"><div class="search"><i class="fa-solid fa-search"></i><input data-table-search placeholder="Search transactions"></div><div class="nav-actions"><button class="icon-btn" data-theme-toggle><i class="fa-solid fa-moon"></i></button><button class="btn btn-primary" data-open-modal><i class="fa-solid fa-plus"></i> Add</button></div></header>
+      <section class="page-pad"><div class="page-heading"><div><h1>Transactions</h1><p>Search, filter, and review your income and expenses.</p></div></div>
+        <div class="filter-bar"><div class="field"><label>Type</label><select data-type-filter><option value="all">All</option><option value="income">Income</option><option value="expense">Expense</option></select></div><div class="field"><label>Category</label><select><option>All Categories</option><option>Food</option><option>Rent</option><option>Travel</option></select></div></div>
+        <div class="card panel table-wrap"><table><thead><tr><th>Transaction</th><th>Date</th><th>Method</th><th>Type</th><th>Amount</th></tr></thead><tbody data-transactions></tbody></table></div>
+      </section>
+    </main>
+  </div>
+  <div class="modal-backdrop" data-modal><form class="card modal" data-transaction-form><header><h2>Add Transaction</h2><button class="icon-btn" type="button" data-close-modal><i class="fa-solid fa-xmark"></i></button></header><div class="form-grid"><div class="field"><label>Type</label><select name="type"><option value="expense">Expense</option><option value="income">Income</option></select></div><div class="field"><label>Amount</label><input name="amount" type="number" min="1" required></div><div class="field"><label>Category</label><select name="category"><option>Food</option><option>Travel</option><option>Shopping</option><option>Education</option><option>Entertainment</option><option>Rent</option><option>Salary</option><option>Freelancing</option><option>Other</option></select></div><div class="field"><label>Date</label><input name="date" type="date" value="2026-06-30" required></div><div class="field"><label>Payment Method</label><select name="method"><option>UPI</option><option>Card</option><option>Cash</option><option>Bank</option></select></div><div class="field"><label>Description</label><textarea name="description"></textarea></div><button class="btn btn-primary" type="submit">Save Transaction</button></div></form></div>
+  <script src="js/storage.js"></script><script src="js/utils.js"></script><script src="js/app.js"></script><script src="js/dashboard.js"></script>
+</body>
+</html>

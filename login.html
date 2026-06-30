@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Smart Expense Tracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <main class="auth-page">
+    <form class="card auth-card" data-auth-form="login">
+      <a class="brand" href="index.html"><span class="brand-mark">S</span><span>Smart Expense</span></a>
+      <h1>Welcome Back</h1>
+      <p>Login to continue tracking budgets, expenses, and savings.</p>
+      <div class="form-grid">
+        <div class="field"><label>Email</label><input name="email" type="email" placeholder="you@example.com" required></div>
+        <div class="field"><label>Password</label><input name="password" type="password" placeholder="Enter password" required></div>
+        <div class="row-between"><label><input type="checkbox"> Remember me</label><a href="#">Forgot Password?</a></div>
+        <button class="btn btn-primary" type="submit">Login</button>
+        <button class="btn btn-secondary" type="button"><i class="fa-brands fa-google"></i> Continue with Google</button>
+        <p>New here? <a href="register.html">Create an account</a></p>
+      </div>
+    </form>
+  </main>
+  <script src="js/storage.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

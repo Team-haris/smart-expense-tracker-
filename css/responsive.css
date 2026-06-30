@@ -1,0 +1,152 @@
+@media (max-width: 1180px) {
+  .grid-4,
+  .timeline {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .logo-strip {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .hero-grid,
+  .showcase,
+  .mock-body,
+  .grid-2,
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 44px;
+  }
+
+  .app-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .mobile-nav {
+    position: fixed;
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    z-index: 20;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 4px;
+    padding: 8px;
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    background: rgba(255, 255, 255, .88);
+    backdrop-filter: blur(16px);
+    box-shadow: var(--shadow);
+  }
+
+  body.dark .mobile-nav {
+    background: rgba(17, 24, 39, .88);
+  }
+
+  .mobile-nav a {
+    display: grid;
+    place-items: center;
+    gap: 3px;
+    color: var(--muted);
+    font-size: 11px;
+  }
+
+  .mobile-nav i {
+    font-size: 17px;
+  }
+
+  .page-pad {
+    padding-bottom: 92px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: min(100% - 28px, 1160px);
+  }
+
+  .section {
+    padding: 62px 0;
+  }
+
+  .nav-links,
+  .nav-actions .btn-secondary,
+  .nav-actions .btn-primary {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: inline-grid;
+  }
+
+  .nav-links.open {
+    position: absolute;
+    top: 80px;
+    left: 14px;
+    right: 14px;
+    display: grid;
+    padding: 16px;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    background: var(--surface);
+    box-shadow: var(--shadow);
+  }
+
+  .dashboard-art {
+    min-height: auto;
+  }
+
+  .floating-card {
+    position: static;
+    margin-top: 12px;
+  }
+
+  .grid-4,
+  .timeline,
+  .logo-strip,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .topbar > div:last-child {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .page-heading {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1,
+  .section-title h2 {
+    font-size: 34px;
+  }
+
+  .auth-card {
+    padding: 22px;
+  }
+
+  .quick-actions {
+    grid-template-columns: 1fr;
+  }
+}

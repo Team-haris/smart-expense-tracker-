@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile | Smart Expense Tracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/dashboard.css"><link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-app-page="profile">
+  <div class="app-shell"><aside class="sidebar"><a class="brand" href="dashboard.html"><span class="brand-mark">S</span><span>Smart Expense</span></a><nav class="nav-list"><a href="dashboard.html"><i class="fa-solid fa-chart-pie"></i>Dashboard</a><a href="transactions.html"><i class="fa-solid fa-right-left"></i>Transactions</a><a href="budget.html"><i class="fa-solid fa-bullseye"></i>Budgets</a><a href="analytics.html"><i class="fa-solid fa-chart-line"></i>Analytics</a><a href="reports.html"><i class="fa-solid fa-file-lines"></i>Reports</a><a class="active" href="profile.html"><i class="fa-solid fa-user"></i>Profile</a><a href="settings.html"><i class="fa-solid fa-gear"></i>Settings</a><a href="index.html"><i class="fa-solid fa-right-from-bracket"></i>Logout</a></nav></aside>
+    <main class="main"><header class="topbar"><div class="search"><i class="fa-solid fa-search"></i><input placeholder="Search profile"></div><div class="nav-actions"><button class="icon-btn" data-theme-toggle><i class="fa-solid fa-moon"></i></button></div></header><section class="page-pad"><div class="page-heading"><div><h1>Profile</h1><p>Manage personal information, security, and notification preferences.</p></div></div><div class="grid grid-2"><div class="card panel profile-card"><div class="avatar">AH</div><div><h2 data-user-name>Ansari Abdul Haris</h2><p class="panel-muted" data-user-email>haris@example.com</p></div></div><form class="card panel form-grid" data-profile-form><h2>Personal Info</h2><div class="field"><label>Name</label><input name="name"></div><div class="field"><label>Email</label><input name="email" type="email"></div><div class="field"><label>Phone</label><input name="phone"></div><button class="btn btn-primary" type="submit">Update Profile</button></form><div class="card panel"><h2>Security</h2><div class="form-grid"><div class="field"><label>Current Password</label><input type="password"></div><div class="field"><label>New Password</label><input type="password"></div><button class="btn btn-secondary">Change Password</button></div></div><div class="card panel"><h2>Danger Zone</h2><p class="panel-muted">Remove account data from this device.</p><button class="btn btn-danger" type="button">Delete Account</button></div></div></section></main></div>
+  <script src="js/storage.js"></script><script src="js/utils.js"></script><script src="js/app.js"></script><script src="js/dashboard.js"></script>
+</body>
+</html>
